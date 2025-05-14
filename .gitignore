@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Foundry VTT
+dist/
+data/
+
+# Testing
+coverage/
+
+# Editor and OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
