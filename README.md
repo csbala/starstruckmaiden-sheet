@@ -1,26 +1,36 @@
 # Starstruck Maiden Character Sheet
 
-A Foundry VTT module that applies a purple shade to player character sheets and provides a custom "Starstruck Maiden" character sheet for specific characters.
+A Foundry VTT module that adds a custom character sheet for D&D 5e player characters, styled with a purple theme. This sheet mirrors the legacy D&D 5e character sheet layout.
+
+## Features
+
+- Custom "Starstruck Maiden Character Sheet" for D&D 5e player characters.
+- Purple-themed styling to distinguish it from the default sheet.
+- Matches the legacy D&D 5e sheet layout with ability scores, skills, saving throws, and more.
 
 ## Installation
 
-1. In Foundry VTT, go to the Add-on Modules tab.
-2. Click "Install Module" and paste the manifest URL: `https://github.com/csbala/starstruckmaiden-sheet/releases/latest/download/module.json`
-3. Activate the module in your world.
+1. Download or clone this repository.
+2. Place the `starstruckmaiden-sheet` folder in your Foundry VTT `Data/modules/` directory.
+3. In Foundry, go to **Add-on Modules**, click **Install Module**, and use the manifest URL:  
+   `https://raw.githubusercontent.com/csbala/starstruckmaiden-sheet/main/module.json`.
+4. Activate the module in your world.
+5. Create a new D&D 5e character (type: "character"), right-click the character in the sidebar, select "Sheet" settings, and choose "Starstruck Maiden Character Sheet".
 
-## Usage
+## Development
 
-- All player character sheets will have a purple shade.
-- To use the custom Starstruck Maiden sheet for a character:
-  1. Open the character sheet.
-  2. Click the "Use Starstruck Sheet" button in the header.
-  3. The sheet will switch to the custom Starstruck Maiden layout.
-  4. Click again to revert to the default sheet.
+- **Scripts**: JavaScript logic is in `scripts/`. The entry point is `main.js`, which sets up hooks.
+- **Hooks**: Hook logic is in `scripts/hooks/`. Currently, `init.js` registers the sheet, and `render.js` logs when the sheet is opened.
+- **Sheet Class**: The sheet class is defined in `scripts/sheets/starstruck-sheet.js`.
+- **Template**: The sheet’s HTML is in `templates/starstruck-sheet.hbs`.
+- **Styles**: CSS is in `styles/starstruck-sheet.css`.
 
-## Author
+## Future Improvements
 
-Balazs Cservenak (https://github.com/csbala)
+- Add Starstruck Maiden-specific fields (e.g., Vital Energy, Celestial Burn).
+- Enhance interactivity using render, update, and close hooks.
+- Expand localization for additional languages.
 
 ## License
 
-MIT License
+MIT License. See [LICENSE](LICENSE) for details.

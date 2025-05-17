@@ -1,3 +1,4 @@
+// Main entry point for the Starstruck Maiden Character Sheet module
 console.log("✅ Starstruck Maiden Sheet Module loaded");
 
 import { setupInitHook } from "./hooks/init.js";

@@ -1,33 +1,159 @@
-<div class="starstruckmaiden">
-  <header class="sheet-header">
+<section class="starstruckmaiden dnd5e sheet actor character">
+  <!-- Character Header -->
+  <header class="sheet-header flexrow">
     <img
-      class="profile-img"
+      class="profile"
       src="{{actor.img}}"
       data-edit="img"
       title="{{actor.name}}"
     />
-    <h1 class="charname"><input
-        name="name"
-        type="text"
-        value="{{actor.name}}"
-        placeholder="Name"
-      /></h1>
+    <div class="header-details flexcol">
+      <h1 class="charname">
+        <input
+          name="name"
+          type="text"
+          value="{{actor.name}}"
+          placeholder="Character Name"
+        />
+      </h1>
+      <div class="character-details flexrow">
+        <div class="initiative flexrow">
+          <label>Initiative</label>
+          <input
+            name="system.attributes.init.value"
+            type="number"
+            value="{{system.attributes.init.value}}"
+            placeholder="0"
+          />
+        </div>
+        <div class="proficiency flexrow">
+          <label>Proficiency</label>
+          <span>{{numberFormat
+              system.attributes.prof
+              decimals=0
+              sign=true
+            }}</span>
+        </div>
+        <div class="hit-points flexrow">
+          <label>Hit Points</label>
+          <div class="hp-values flexrow">
+            <input
+              name="system.attributes.hp.value"
+              type="number"
+              value="{{system.attributes.hp.value}}"
+              placeholder="0"
+            />
+            <span>/</span>
+            <input
+              name="system.attributes.hp.max"
+              type="number"
+              value="{{system.attributes.hp.max}}"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="temp-hp flexrow">
+          <label>Temp HP</label>
+          <input
+            name="system.attributes.hp.temp"
+            type="number"
+            value="{{system.attributes.hp.temp}}"
+            placeholder="0"
+          />
+        </div>
+      </div>
+    </div>
   </header>
 
-  <nav class="tabs" data-group="primary-tabs">
-    <a class="item" data-tab="attributes">Attributes</a>
-    <a class="item" data-tab="inventory">Inventory</a>
-  </nav>
+  <!-- Main Content -->
+  <div class="sheet-content flexrow">
+    <!-- Left Sidebar -->
+    <div class="sidebar flexcol">
+      <!-- Ability Scores -->
+      <div class="ability-scores flexcol">
+        {{#each system.abilities as |ability key|}}
+          <div class="ability flexrow">
+            <label>{{key}}</label>
+            <input
+              name="system.abilities.{{key}}.value"
+              type="number"
+              value="{{ability.value}}"
+              placeholder="10"
+            />
+            <span class="modifier">{{numberFormat
+                ability.mod
+                decimals=0
+                sign=true
+              }}</span>
+          </div>
+        {{/each}}
+      </div>
 
-  <section class="sheet-body">
-    <div class="tab attributes" data-group="primary-tabs" data-tab="attributes">
-      <h2>{{actor.name}}'s Attributes</h2>
-      <p>Level: {{system.details.level}}</p>
-      <p>HP: {{system.attributes.hp.value}} / {{system.attributes.hp.max}}</p>
+      <!-- Skills -->
+      <div class="skills flexcol">
+        <h3>Skills</h3>
+        {{#each system.skills as |skill key|}}
+          <div class="skill flexrow">
+            <input
+              type="checkbox"
+              name="system.skills.{{key}}.prof"
+              {{checked skill.prof}}
+            />
+            <label>{{localize (concat "DND5E.Skill" key)}}</label>
+            <span class="skill-modifier">{{numberFormat
+                skill.value
+                decimals=0
+                sign=true
+              }}</span>
+          </div>
+        {{/each}}
+      </div>
+
+      <!-- Saving Throws -->
+      <div class="saving-throws flexcol">
+        <h3>Saving Throws</h3>
+        {{#each system.abilities as |ability key|}}
+          <div class="saving-throw flexrow">
+            <input
+              type="checkbox"
+              name="system.abilities.{{key}}.proficient"
+              {{checked ability.proficient}}
+            />
+            <label>{{key}}</label>
+            <span>{{numberFormat ability.save decimals=0 sign=true}}</span>
+          </div>
+        {{/each}}
+      </div>
+
+      <!-- Favorites -->
+      <div class="favorites flexcol">
+        <h3>Favorites</h3>
+        <div class="drop-favorite">Drop Favorite</div>
+      </div>
     </div>
-    <div class="tab inventory" data-group="primary-tabs" data-tab="inventory">
-      <h2>Inventory</h2>
-      <p>Items will go here...</p>
+
+    <!-- Right Side -->
+    <div class="main-content flexcol">
+      <div class="details flexrow">
+        <div class="species flexcol">
+          <label>Species</label>
+          <input
+            name="system.details.race"
+            type="text"
+            value="{{system.details.race}}"
+            placeholder="Humanoid"
+          />
+        </div>
+        <div class="background flexcol">
+          <label>Background</label>
+          <input
+            name="system.details.background"
+            type="text"
+            value="{{system.details.background}}"
+            placeholder="Add Background"
+          />
+        </div>
+      </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
