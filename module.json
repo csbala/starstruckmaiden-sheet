@@ -7,7 +7,7 @@
   "minimumCoreVersion": "12",
   "compatibleCoreVersion": "12",
   "system": "dnd5e",
-  "esmodules": ["scr/main.js"],
+  "esmodules": ["src/main.js"],
   "styles": ["styles/starstruck-sheet.css"],
   "languages": [
     {
