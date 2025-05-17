@@ -1,0 +1,20 @@
+{
+  "name": "starstruckmaiden-sheet",
+  "version": "1.0.0",
+  "description": "A Foundry VTT module that applies a purple shade to player character sheets and provides a custom \"Starstruck Maiden\" character sheet for specific characters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csbala/starstruckmaiden-sheet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csbala/starstruckmaiden-sheet/issues"
+  },
+  "homepage": "https://github.com/csbala/starstruckmaiden-sheet#readme"
+}

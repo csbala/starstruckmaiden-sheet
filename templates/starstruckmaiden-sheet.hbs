@@ -1,0 +1,33 @@
+<div class="starstruckmaiden">
+  <header class="sheet-header">
+    <img
+      class="profile-img"
+      src="{{actor.img}}"
+      data-edit="img"
+      title="{{actor.name}}"
+    />
+    <h1 class="charname"><input
+        name="name"
+        type="text"
+        value="{{actor.name}}"
+        placeholder="Name"
+      /></h1>
+  </header>
+
+  <nav class="tabs" data-group="primary-tabs">
+    <a class="item" data-tab="attributes">Attributes</a>
+    <a class="item" data-tab="inventory">Inventory</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab attributes" data-group="primary-tabs" data-tab="attributes">
+      <h2>{{actor.name}}'s Attributes</h2>
+      <p>Level: {{system.details.level}}</p>
+      <p>HP: {{system.attributes.hp.value}} / {{system.attributes.hp.max}}</p>
+    </div>
+    <div class="tab inventory" data-group="primary-tabs" data-tab="inventory">
+      <h2>Inventory</h2>
+      <p>Items will go here...</p>
+    </div>
+  </section>
+</div>

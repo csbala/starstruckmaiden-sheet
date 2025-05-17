@@ -1,21 +1,14 @@
 {
-  "id": "starstruckmaiden-sheet",
+  "name": "starstruckmaiden-sheet",
   "title": "Starstruck Maiden Character Sheet",
-  "description": "A Foundry VTT module that applies a purple shade to player character sheets and provides a custom Starstruck Maiden sheet for specific characters.",
+  "description": "Adds a purple shade to DnD5e character sheets and a custom Starstruck Maiden sheet for specific characters.",
+  "author": "Balázs Cservenák",
   "version": "1.0.0",
-  "compatibility": {
-    "minimum": "10",
-    "verified": "11"
-  },
-  "authors": [
-    {
-      "name": "Balazs Cservenak",
-      "email": "your.email@example.com",
-      "url": "https://github.com/csbala"
-    }
-  ],
-  "esmodules": ["src/js/module.js"],
-  "styles": ["src/css/style.css"],
+  "minimumCoreVersion": "12",
+  "compatibleCoreVersion": "12",
+  "system": "dnd5e",
+  "esmodules": ["src/bootstrap.js"],
+  "styles": ["styles/sheet.css"],
   "languages": [
     {
       "lang": "en",
@@ -24,6 +17,6 @@
     }
   ],
   "url": "https://github.com/csbala/starstruckmaiden-sheet",
-  "manifest": "https://github.com/csbala/starstruckmaiden-sheet/releases/latest/download/module.json",
-  "download": "https://github.com/csbala/starstruckmaiden-sheet/archive/v1.0.0.zip"
+  "manifest": "https://raw.githubusercontent.com/csbala/starstruckmaiden-sheet/main/module.json",
+  "download": "https://github.com/csbala/starstruckmaiden-sheet/archive/refs/heads/main.zip"
 }
