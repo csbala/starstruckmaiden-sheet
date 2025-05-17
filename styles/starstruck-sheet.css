@@ -1,8 +1,3 @@
-.starstruckmaiden {
-  background-color: rgba(147, 112, 219, 0.1); /* Light purple background */
-  border: 1px solid #9370db; /* Medium purple border */
-}
-
 .starstruckmaiden .window-content {
   background: linear-gradient(
     to bottom,
@@ -12,12 +7,12 @@
 }
 
 .starstruckmaiden .sheet-header {
-  border-bottom: 2px solid #9370db;
+  border-bottom: 2px solid #9370db; /* Medium purple border */
 }
 
-.starstruckmaiden .sidebar {
-  background-color: rgba(216, 191, 216, 0.2); /* Thistle purple for sidebar */
-  border-right: 1px solid #9370db;
+.starstruckmaiden .tabs .item {
+  background-color: rgba(216, 191, 216, 0.2); /* Thistle purple for tabs */
+  border: 1px solid #9370db;
 }
 
 .starstruckmaiden label {

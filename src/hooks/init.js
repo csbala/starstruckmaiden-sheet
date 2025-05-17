@@ -8,6 +8,13 @@ export function setupInitHook() {
       makeDefault: false, // Don't override the default sheet
       label: "STARSTRUCKMAIDEN.SheetLabel", // Localized label
     });
-    console.log("Starstruck Maiden Sheet registered!");
+    console.log(
+      "Starstruck Maiden Sheet registered with D&D 5e system version:",
+      game.system.version
+    );
+    console.log(
+      "D&D 5e system settings:",
+      game.settings.get("dnd5e", "systemSettings")
+    );
   });
 }

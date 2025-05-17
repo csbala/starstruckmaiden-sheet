@@ -1,10 +1,8 @@
-// Defines the Starstruck Maiden character sheet class
+// Defines the Starstruck Maiden character sheet class to load the new D&D 5e sheet
 export class StarstruckMaidenSheet extends dnd5e.applications.actor
-  .ActorSheet5eCharacter {
+  .ActorSheet5eCharacter2 {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e", "sheet", "actor", "character", "starstruckmaiden"],
-      template: "modules/starstruckmaiden-sheet/templates/starstruck-sheet.hbs",
       width: 600,
       height: 700,
     });
