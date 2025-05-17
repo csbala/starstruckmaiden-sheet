@@ -1,14 +1,13 @@
 {
   "name": "starstruckmaiden-sheet",
   "title": "Starstruck Maiden Character Sheet",
-  "description": "Adds a custom Starstruck Maiden character sheet for D&D 5e with a purple theme.",
+  "description": "Loads the new D&D 5e character sheet for D&D 5e characters.",
   "author": "Balázs Cservenák",
   "version": "1.1.0",
   "minimumCoreVersion": "12",
   "compatibleCoreVersion": "12",
   "system": "dnd5e",
   "esmodules": ["src/main.js"],
-  "styles": ["styles/starstruck-sheet.css"],
   "languages": [
     {
       "lang": "en",

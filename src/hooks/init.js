@@ -12,9 +12,5 @@ export function setupInitHook() {
       "Starstruck Maiden Sheet registered with D&D 5e system version:",
       game.system.version
     );
-    console.log(
-      "D&D 5e system settings:",
-      game.settings.get("dnd5e", "systemSettings")
-    );
   });
 }
