@@ -1,13 +1,33 @@
 {
-  "name": "starstruckmaiden-sheet",
+  "id": "starstruckmaiden-sheet",
   "title": "Starstruck Maiden Character Sheet",
-  "description": "Loads the new D&D 5e character sheet for D&D 5e characters.",
-  "author": "Balázs Cservenák",
-  "version": "1.1.0",
-  "minimumCoreVersion": "12",
-  "compatibleCoreVersion": "12",
-  "system": "dnd5e",
+  "description": "Adds a purple shade to D&D 5e character sheets and a custom Starstruck Maiden sheet for specific characters.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Balázs Cservenák",
+      "url": "https://github.com/csbala"
+    }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12",
+    "maximum": "12.999"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "compatibility": {
+          "minimum": "4.0.0",
+          "verified": "4.3.9",
+          "maximum": "4.99"
+        }
+      }
+    ]
+  },
   "esmodules": ["src/main.js"],
+  "styles": ["styles/starstruck-sheet.css"],
   "languages": [
     {
       "lang": "en",
@@ -17,5 +37,6 @@
   ],
   "url": "https://github.com/csbala/starstruckmaiden-sheet",
   "manifest": "https://raw.githubusercontent.com/csbala/starstruckmaiden-sheet/main/module.json",
-  "download": "https://github.com/csbala/starstruckmaiden-sheet/archive/refs/heads/main.zip"
+  "download": "https://github.com/csbala/starstruckmaiden-sheet/archive/refs/heads/main.zip",
+  "readme": "https://github.com/csbala/starstruckmaiden-sheet#readme"
 }
